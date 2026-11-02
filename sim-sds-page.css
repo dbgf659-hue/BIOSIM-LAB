@@ -1,0 +1,12 @@
+/* SDS-PAGE gel and Bradford side panel. */
+.sp-art { display: grid; grid-template-columns: 1.1fr 1fr; gap: 12px; border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); }
+.sp-gel { display: flex; gap: 6px; padding: 8px; border-radius: 8px; background: rgba(140, 220, 210, 0.06); min-height: 190px; }
+.sp-lane { position: relative; flex: 1; border-radius: 3px; background: rgba(255, 255, 255, 0.03); }
+.sp-lane b { position: absolute; bottom: -2px; left: 0; right: 0; text-align: center; font-size: 9px; font-weight: 500; color: #7fa7a2; }
+.sp-lane i { position: absolute; left: 8%; right: 8%; height: 3px; border-radius: 2px; background: rgba(147, 197, 253, 0.55); }
+.sp-gel.is-stained .sp-lane i { background: #1e3a8a; box-shadow: 0 0 4px rgba(30, 58, 138, 0.9); }
+.sp-art__side { display: grid; gap: 6px; align-content: start; }
+.sp-art__side p { margin: 0; font-size: 11px; color: #9fc2bd; }
+.sp-standards { margin: 0; padding-left: 14px; font-size: 10px; color: #7fa7a2; display: grid; gap: 2px; max-height: 110px; overflow: auto; }
+.sp-read { color: #a7f3d0 !important; }
+.sp-art__side .ho-btn { width: 100%; }

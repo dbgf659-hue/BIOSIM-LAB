@@ -1,0 +1,12 @@
+/* Autoclave flask and pressure gauge. */
+.ac-art { display: grid; grid-template-columns: 1fr 120px 1fr; gap: 12px; border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); align-items: center; }
+.ac-flask { position: relative; min-height: 130px; border-radius: 10px 10px 26px 26px; border: 1px solid rgba(190, 240, 235, 0.45); background: rgba(140, 220, 210, 0.08); display: grid; place-items: end center; padding-bottom: 12px; }
+.ac-flask.is-dissolved { background: linear-gradient(180deg, rgba(253, 230, 138, 0.1) 30%, rgba(253, 230, 138, 0.35)); }
+.ac-flask b { font-size: 10px; font-weight: 500; color: #9fc2bd; }
+.ac-plug { position: absolute; top: -6px; left: 40%; right: 40%; height: 12px; border-radius: 4px; background: #d6c7a1; }
+.ac-gauge { position: relative; height: 110px; width: 110px; border-radius: 50%; border: 2px solid rgba(127, 167, 162, 0.4); display: grid; place-items: center; background: rgba(2, 12, 14, 0.8); }
+.ac-gauge span { position: absolute; inset: 8px; border-radius: 50%; background: conic-gradient(#f97316 calc(var(--v) * 1turn), rgba(255, 255, 255, 0.06) 0); opacity: 0.35; }
+.ac-gauge b { position: relative; font-size: 13px; color: #e2f6f2; }
+.ac-gauge em { position: absolute; bottom: 16px; font-size: 9px; font-style: normal; color: #7f8f8d; }
+.ac-art__actions { display: grid; gap: 6px; }
+.ac-read { grid-column: 1 / -1; margin: 0; font-size: 10px; color: #8fb3ae; }

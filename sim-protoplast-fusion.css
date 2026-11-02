@@ -1,0 +1,9 @@
+/* Protoplast field and fusion facts. */
+.pf-art { display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px; border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); align-items: center; }
+.pf-field { position: relative; aspect-ratio: 1; max-width: 220px; width: 100%; margin: 0 auto; border-radius: 50%; background: radial-gradient(circle, rgba(134, 239, 172, 0.12), rgba(8, 18, 16, 0.95) 75%); border: 2px solid rgba(127, 167, 162, 0.3); }
+.pf-field b { position: absolute; border-radius: 50%; background: rgba(167, 243, 208, 0.75); transform: translate(-50%, -50%); box-shadow: 0 0 6px rgba(167, 243, 208, 0.4); }
+.pf-field i { position: absolute; width: 26px; height: 22px; border-radius: 50%; background: rgba(46, 230, 197, 0.45); transform: translate(-50%, -50%); border: 1px solid rgba(46, 230, 197, 0.7); }
+.pf-art__facts { display: grid; gap: 5px; }
+.pf-art__facts p { display: flex; justify-content: space-between; gap: 8px; margin: 0; font-size: 11px; padding-bottom: 3px; border-bottom: 1px dashed rgba(127, 167, 162, 0.2); }
+.pf-art__facts b { font-weight: 500; color: #7fa7a2; }
+.pf-art__facts span { color: #e2f6f2; }

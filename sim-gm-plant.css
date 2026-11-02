@@ -1,0 +1,10 @@
+/* GM pipeline board. */
+.gm-art { border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); display: grid; gap: 8px; }
+.gm-art__projects { display: flex; gap: 6px; }
+.gm-art__projects .ho-btn.is-on { border-color: #2ee6c5; color: #2ee6c5; }
+.gm-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.gm-steps li { display: flex; align-items: center; gap: 8px; font-size: 11px; color: #7f8f8d; padding: 3px 6px; border-radius: 5px; border: 1px solid transparent; }
+.gm-steps li.is-next { border-color: rgba(46, 230, 197, 0.4); color: #e2f6f2; }
+.gm-steps li.is-done { color: #2ee6c5; }
+.gm-steps .ho-btn { width: 24px; padding: 2px 0; }
+.gm-read { margin: 0; font-size: 10px; color: #8fb3ae; }

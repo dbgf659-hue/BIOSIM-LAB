@@ -1,0 +1,14 @@
+/* Microscope field, scale bar and objectives. */
+.vm-art { display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px; border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); }
+.vm-scope { display: grid; gap: 6px; }
+.vm-field { position: relative; aspect-ratio: 1; max-width: 230px; width: 100%; margin: 0 auto; border-radius: 50%; background: radial-gradient(circle at 50% 45%, rgba(240, 245, 235, 0.24), rgba(8, 18, 16, 0.95) 72%); border: 2px solid rgba(127, 167, 162, 0.35); transition: filter 0.15s linear; }
+.vm-field b { position: absolute; transform: translate(-50%, -50%); box-shadow: 0 0 4px rgba(255, 255, 255, 0.25); }
+.vm-field em { position: absolute; inset: 0; display: grid; place-items: center; font-size: 10px; font-style: normal; color: #6f8f8b; }
+.vm-scale { display: flex; align-items: center; gap: 6px; justify-content: center; font-size: 9px; color: #7fa7a2; }
+.vm-scale span { width: 70px; height: 3px; background: #e2f6f2; }
+.vm-scale u { text-decoration: none; }
+.vm-art__controls { display: grid; gap: 8px; align-content: start; }
+.vm-objectives { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+.vm-objectives .ho-btn { padding: 4px 0; }
+.vm-objectives .ho-btn.is-on { border-color: #2ee6c5; color: #2ee6c5; }
+.vm-read { margin: 0; font-size: 10px; color: #8fb3ae; }

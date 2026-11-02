@@ -1,0 +1,19 @@
+/* CRISPR guide design and cut map. */
+.cr-art { border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); display: grid; gap: 8px; }
+.cr-art__design { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
+.cr-art__design label { display: grid; gap: 4px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: #7fa7a2; flex: 1; min-width: 220px; }
+.cr-art__design input { font-family: ui-monospace, monospace; letter-spacing: 0.12em; padding: 6px 8px; border-radius: 6px; border: 1px solid rgba(46, 230, 197, 0.35); background: rgba(4, 18, 20, 0.9); color: #e2f6f2; font-size: 12px; }
+.cr-art__chips { display: flex; gap: 6px; font-size: 10px; }
+.cr-art__chips span { padding: 3px 8px; border-radius: 99px; border: 1px solid rgba(127, 167, 162, 0.35); color: #9fc2bd; }
+.cr-art__chips .is-ok { border-color: #2ee6c5; color: #2ee6c5; }
+.cr-art__chips .is-bad { border-color: #f87171; color: #fca5a5; }
+.cr-seq { position: relative; display: flex; flex-wrap: wrap; font-family: ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; line-height: 1.7; color: #7d9a96; }
+.cr-seq span { padding: 0 1px; }
+.cr-seq .is-guide { color: #2ee6c5; background: rgba(46, 230, 197, 0.12); border-radius: 2px; }
+.cr-seq .is-pam { color: #fbbf24; background: rgba(251, 191, 36, 0.14); }
+.cr-seq u { position: absolute; top: -2px; bottom: -2px; width: 1px; background: #f87171; text-decoration: none; }
+.cr-art__legend { display: flex; gap: 10px; font-size: 10px; color: #7f8f8d; }
+.cr-art__legend .is-guide { color: #2ee6c5; }
+.cr-art__legend .is-pam { color: #fbbf24; }
+.cr-art__actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.cr-result { display: block; font-family: ui-monospace, monospace; font-size: 11px; color: #fca5a5; background: rgba(248, 113, 113, 0.08); border-radius: 6px; padding: 6px 8px; letter-spacing: 0.08em; }

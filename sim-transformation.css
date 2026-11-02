@@ -1,0 +1,15 @@
+/* Transformation plates and step chips. */
+.tr-art { border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); }
+.tr-steps { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+.tr-steps span { font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 99px; border: 1px solid rgba(127, 167, 162, 0.35); color: #7f8f8d; }
+.tr-steps span.is-done { border-color: #2ee6c5; color: #2ee6c5; background: rgba(46, 230, 197, 0.1); }
+.tr-plates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.tr-plate { display: grid; justify-items: center; gap: 4px; }
+.tr-plate__dish { position: relative; width: 100%; max-width: 110px; aspect-ratio: 1; border-radius: 50%; border: 2px solid rgba(190, 240, 235, 0.35); background: radial-gradient(circle at 40% 35%, rgba(251, 191, 36, 0.22), rgba(180, 140, 60, 0.12)); }
+.tr-plate.is-used .tr-plate__dish { border-color: #2ee6c5; }
+.tr-colony { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: #7dd3fc; box-shadow: 0 0 4px #38bdf8; transform: translate(-50%, -50%); }
+.tr-colony.is-white { background: #f8fafc; box-shadow: 0 0 4px #fff; }
+.tr-plate b { font-size: 10px; color: #9fc2bd; font-weight: 500; }
+.tr-plate span { font-size: 9px; color: #7f8f8d; }
+.tr-read { margin: 8px 0 0; font-size: 11px; color: #8fb3ae; }
+.tr-read b { color: #e2f6f2; }

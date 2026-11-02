@@ -1,0 +1,6 @@
+/* Wastewater treatment train. */
+.ww-art { border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); display: grid; gap: 6px; }
+.ww-stage { display: flex; justify-content: space-between; gap: 8px; font-size: 10px; padding: 5px 8px; border-radius: 5px; border: 1px solid rgba(127, 167, 162, 0.25); color: #7f8f8d; }
+.ww-stage.is-done { border-color: #2ee6c5; color: #2ee6c5; background: rgba(46, 230, 197, 0.08); }
+.ww-stage b { font-weight: 500; }
+.ww-read { margin: 0; font-size: 10px; color: #8fb3ae; }

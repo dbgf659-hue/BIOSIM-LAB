@@ -1,0 +1,20 @@
+/* PCR bench artwork. */
+.pcr-art { display: grid; grid-template-columns: 1.5fr 1fr; gap: 12px; }
+.pcr-art__machine { border: 1px solid rgba(46, 230, 197, 0.2); border-radius: 12px; padding: 10px; background: rgba(5, 20, 24, 0.82); }
+.pcr-art__machine header { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #7fa7a2; }
+.pcr-art__machine.is-running { border-color: #2ee6c5; box-shadow: 0 0 18px rgba(46, 230, 197, 0.15); }
+.pcr-art__block { display: flex; align-items: baseline; justify-content: space-between; margin: 8px 0; }
+.pcr-art__temp { font-size: 26px; font-weight: 600; color: #e2f6f2; font-variant-numeric: tabular-nums; }
+.pcr-art__phase { font-size: 11px; color: #fbbf24; text-transform: uppercase; }
+.pcr-art__program { display: flex; gap: 6px; font-size: 10px; color: #9fc2bd; }
+.pcr-art__program span { flex: 1; text-align: center; padding: 3px 0; border-radius: 4px; background: rgba(46, 230, 197, 0.08); }
+.pcr-art__progress { height: 4px; border-radius: 4px; background: rgba(255, 255, 255, 0.08); margin: 8px 0 6px; overflow: hidden; }
+.pcr-art__progress i { display: block; height: 100%; background: #2ee6c5; transition: width 0.2s linear; }
+.pcr-art__machine small { font-size: 10px; color: #8fb3ae; }
+.pcr-art__lane { border: 1px solid rgba(120, 220, 200, 0.22); border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 6px; align-items: center; background: rgba(140, 220, 210, 0.05); }
+.pcr-art__lane b { font-size: 11px; color: #9fc2bd; font-weight: 500; }
+.pcr-art__lane span { font-size: 10px; color: #7f8f8d; text-align: center; }
+.pcr-lane { position: relative; width: 46px; height: 120px; border-radius: 4px; background: rgba(4, 25, 28, 0.8); }
+.pcr-well { position: absolute; top: 4px; left: 12%; right: 12%; height: 5px; background: #1d4ed8; border-radius: 2px; }
+.pcr-band { position: absolute; left: 8%; right: 8%; height: 3px; background: #d1fae5; border-radius: 2px; box-shadow: 0 0 6px #2ee6c5; }
+.pcr-band--ns { background: #fca5a5; box-shadow: 0 0 6px #f87171; opacity: 0.7; }

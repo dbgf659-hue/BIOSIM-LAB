@@ -1,0 +1,8 @@
+/* Phylogenetic distance matrix and tree. */
+.pt2-art { border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); display: grid; gap: 8px; }
+.pt2-matrix { border-collapse: collapse; font-size: 10px; width: 100%; }
+.pt2-matrix th, .pt2-matrix td { border: 1px solid rgba(127, 167, 162, 0.25); padding: 3px 5px; text-align: center; color: #9fc2bd; }
+.pt2-matrix th { background: rgba(46, 230, 197, 0.08); color: #a7f3d0; }
+.pt2-tree { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 10px; color: #e2f6f2; }
+.pt2-tree span { padding: 3px 8px; border-radius: 4px; background: rgba(46, 230, 197, 0.1); }
+.pt2-tree em { font-style: normal; color: #fbbf24; }

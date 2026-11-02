@@ -1,0 +1,8 @@
+/* ELISA 96-well plate. */
+.el-art { border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); display: grid; gap: 8px; }
+.el-art__head { display: flex; justify-content: space-between; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: #7fa7a2; }
+.el-plate { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; }
+.el-well { display: block; aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(127, 167, 162, 0.3); }
+.el-well.is-sample { border-color: #2ee6c5; box-shadow: 0 0 6px rgba(46, 230, 197, 0.4); }
+.el-art__legend { display: flex; gap: 10px; font-size: 9px; color: #7f8f8d; }
+.el-art__actions { display: flex; gap: 6px; }

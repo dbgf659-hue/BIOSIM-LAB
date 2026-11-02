@@ -1,0 +1,17 @@
+/* DNA extraction bench artwork. */
+.dna-art { border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); }
+.dna-art__stages { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.dna-art__stages span { font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 99px; border: 1px solid rgba(127, 167, 162, 0.35); color: #7f8f8d; }
+.dna-art__stages span.is-done { border-color: #2ee6c5; color: #2ee6c5; background: rgba(46, 230, 197, 0.1); }
+.dna-art__bench { display: grid; grid-template-columns: 1fr 1fr 1.1fr; gap: 10px; align-items: stretch; }
+.dna-art__mortar, .dna-art__tube { position: relative; min-height: 150px; border: 1px solid rgba(120, 220, 200, 0.22); border-radius: 10px; padding: 8px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 8px; background: rgba(140, 220, 210, 0.05); }
+.dna-art__mortar.has-sample { background: rgba(233, 213, 161, 0.12); }
+.dna-art__mortar b, .dna-art__tube b { font-size: 11px; font-weight: 500; color: #9fc2bd; }
+.dna-art__tube.has-threads { background: rgba(219, 234, 254, 0.1); }
+.dna-threads { position: absolute; inset: 14px 22px 42px; }
+.dna-threads i { position: absolute; left: 0; right: 0; height: 1px; background: rgba(240, 253, 250, 0.85); box-shadow: 0 0 4px #fff; transform: rotate(-2deg); }
+.dna-ethanol { position: absolute; left: 24%; right: 24%; bottom: 38px; height: 34%; border-radius: 4px; background: rgba(219, 234, 254, 0.28); }
+.dna-art__actions { display: flex; flex-direction: column; gap: 6px; justify-content: center; }
+.dna-art__actions .ho-btn { width: 100%; }
+.dna-art__read { margin: 8px 0 0; font-size: 11px; color: #8fb3ae; }
+.dna-art__read b { color: #e2f6f2; }

@@ -1,0 +1,9 @@
+/* Growth flask and phase panel. */
+.gc-art { display: grid; grid-template-columns: 120px 1fr; gap: 12px; border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); align-items: center; }
+.gc-flask { position: relative; height: 150px; border-radius: 8px 8px 30px 30px; border: 1px solid rgba(190, 240, 235, 0.45); background: rgba(140, 220, 210, 0.07); overflow: hidden; display: grid; align-items: end; }
+.gc-flask i { display: block; width: 100%; background: linear-gradient(180deg, rgba(252, 211, 77, 0.45), rgba(180, 140, 60, 0.25)); transition: height 0.3s; }
+.gc-flask span { position: absolute; bottom: 6px; left: 0; right: 0; text-align: center; font-size: 10px; color: #e2f6f2; }
+.gc-art__side { display: grid; gap: 4px; }
+.gc-art__side p { display: flex; justify-content: space-between; margin: 0; font-size: 11px; padding-bottom: 3px; border-bottom: 1px dashed rgba(127, 167, 162, 0.2); }
+.gc-art__side b { font-weight: 500; color: #7fa7a2; }
+.gc-art__side span { color: #e2f6f2; }

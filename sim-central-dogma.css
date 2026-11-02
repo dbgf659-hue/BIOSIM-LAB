@@ -1,0 +1,21 @@
+/* Central dogma helix and sequence readout. */
+.cd-art { display: grid; grid-template-columns: 130px 1fr; gap: 12px; border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); }
+.cd-helix { position: relative; height: 150px; border-radius: 10px; overflow: hidden; background: radial-gradient(circle at 50% 20%, rgba(46, 230, 197, 0.12), transparent 70%); }
+.cd-helix__strand { position: absolute; inset: 10px 28px; border: 3px solid #2ee6c5; border-radius: 50% / 40%; opacity: 0.7; }
+.cd-helix__strand--b { transform: rotate(28deg); border-color: #f472b6; inset: 18px 34px; }
+.cd-helix.is-open .cd-helix__strand { border-radius: 40% 40% 0 0; transform: translateY(-6px); }
+.cd-helix.is-open .cd-helix__strand--b { transform: translateY(18px); }
+.cd-helix__rung { position: absolute; top: 48%; left: 20%; right: 20%; height: 2px; background: repeating-linear-gradient(90deg, #94a3b8 0 4px, transparent 4px 8px); }
+.cd-helix em { position: absolute; bottom: 6px; left: 0; right: 0; text-align: center; font-size: 10px; font-style: normal; color: #7fa7a2; }
+.cd-art__readout { display: grid; gap: 6px; align-content: start; }
+.cd-seq { display: flex; flex-wrap: wrap; gap: 1px; margin: 0; font-family: ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; }
+.cd-seq span { color: #8fb3ae; padding: 0 1px; }
+.cd-seq .is-hot { color: #2ee6c5; }
+.cd-seq--rna span { color: #fbbf24; }
+.cd-hint { margin: 0; font-size: 11px; color: #6f8f8b; }
+.cd-protein { display: flex; flex-wrap: wrap; gap: 3px; }
+.cd-protein b { font-family: ui-monospace, monospace; font-size: 10px; padding: 2px 5px; border-radius: 3px; background: rgba(46, 230, 197, 0.12); color: #d1fae5; font-weight: 500; }
+.cd-protein b.is-stop { background: rgba(248, 113, 113, 0.18); color: #fca5a5; }
+.cd-art__actions { grid-column: 1 / -1; display: flex; gap: 6px; flex-wrap: wrap; }
+.cd-art__mutations { grid-column: 1 / -1; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; font-size: 10px; color: #7fa7a2; }
+.cd-effect { grid-column: 1 / -1; margin: 0; font-size: 11px; color: #fbbf24; }

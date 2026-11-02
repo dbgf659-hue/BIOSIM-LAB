@@ -1,0 +1,11 @@
+/* Leaf disc co-cultivation and T-DNA facts. */
+.ag-art { display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px; border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); align-items: center; }
+.ag-disc { position: relative; aspect-ratio: 1; max-width: 200px; width: 100%; margin: 0 auto; border-radius: 50%; background: radial-gradient(circle at 45% 40%, rgba(134, 239, 172, 0.3), rgba(20, 60, 30, 0.8)); border: 2px solid rgba(134, 239, 172, 0.5); }
+.ag-disc b { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: rgba(248, 113, 113, 0.8); transform: translate(-50%, -50%); }
+.ag-disc.is-overgrown b { background: rgba(248, 113, 113, 1); box-shadow: 0 0 5px #f87171; }
+.ag-disc i { position: absolute; inset: 30%; border-radius: 50%; border: 2px dashed rgba(46, 230, 197, 0.9); animation: ag-pulse 1.8s ease-in-out infinite; }
+@keyframes ag-pulse { 50% { transform: scale(0.72); opacity: 0.5; } }
+.ag-art__facts { display: grid; gap: 5px; }
+.ag-art__facts p { display: flex; justify-content: space-between; gap: 8px; margin: 0; font-size: 11px; padding-bottom: 3px; border-bottom: 1px dashed rgba(127, 167, 162, 0.2); }
+.ag-art__facts b { font-weight: 500; color: #7fa7a2; }
+.ag-art__facts span { color: #e2f6f2; }

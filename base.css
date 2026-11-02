@@ -1,0 +1,451 @@
+/* ==========================================================================
+   BioSim Lab · base.css
+   Design tokens, reset, typography and global surfaces.
+   ========================================================================== */
+
+:root {
+  /* Typography ----------------------------------------------------------- */
+  --font-display: "Poppins", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  /* Spacing scale -------------------------------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Layout --------------------------------------------------------------- */
+  --container: 1240px;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --nav-height: 74px;
+
+  /* Radii ---------------------------------------------------------------- */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-2xl: 36px;
+  --radius-pill: 999px;
+
+  /* Motion --------------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-1: 140ms;
+  --dur-2: 240ms;
+  --dur-3: 400ms;
+  --dur-4: 700ms;
+
+  /* Dark theme (default) -------------------------------------------------- */
+  color-scheme: dark;
+
+  --bg-0: #040a0b;
+  --bg-1: #061113;
+  --bg-2: #08191c;
+  --bg-elevated: #0a1d20;
+
+  --surface: rgba(9, 27, 30, 0.58);
+  --surface-strong: rgba(8, 24, 27, 0.95);
+  --surface-soft: rgba(255, 255, 255, 0.035);
+  --surface-hover: rgba(255, 255, 255, 0.06);
+  --card-bg: linear-gradient(
+    155deg,
+    rgba(20, 51, 53, 0.58) 0%,
+    rgba(7, 20, 23, 0.72) 62%,
+    rgba(9, 25, 27, 0.9) 100%
+  );
+  --nav-bg: rgba(4, 13, 15, 0.72);
+  --input-bg: rgba(255, 255, 255, 0.035);
+
+  --text-1: #ecf8f5;
+  --text-2: #a6c2be;
+  --text-3: #6e8b87;
+
+  --line: rgba(173, 255, 236, 0.1);
+  --line-strong: rgba(173, 255, 236, 0.2);
+  --line-bright: rgba(173, 255, 236, 0.34);
+  --overlay: rgba(2, 7, 8, 0.74);
+
+  --teal: #2ee6c5;
+  --teal-ink: #2ee6c5;
+  --teal-deep: #0ea88e;
+  --green: #7cf0a7;
+  --violet: #a78bfa;
+  --pink: #f472b6;
+  --sky: #38bdf8;
+  --amber: #fbbf24;
+  --danger: #fb7185;
+  --success: #3ddc97;
+
+  --cat-molecular: #2ee6c5;
+  --cat-microbiology: #a3e635;
+  --cat-cell: #a78bfa;
+  --cat-agri: #fbbf24;
+  --cat-industrial: #38bdf8;
+  --cat-bioinformatics: #f472b6;
+
+  --diff-beginner: #3ddc97;
+  --diff-intermediate: #fbbf24;
+  --diff-advanced: #fb7185;
+
+  --ambient-teal: rgba(46, 230, 197, 0.1);
+  --ambient-violet: rgba(167, 139, 250, 0.09);
+  --ambient-sky: rgba(56, 189, 248, 0.06);
+
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 16px 44px rgba(0, 0, 0, 0.32);
+  --shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.46);
+  --shadow-glow: 0 0 0 1px rgba(46, 230, 197, 0.16), 0 20px 60px rgba(46, 230, 197, 0.1);
+  --glow-teal: 0 0 42px rgba(46, 230, 197, 0.18);
+  --glow-violet: 0 0 48px rgba(167, 139, 250, 0.16);
+
+  --focus: 0 0 0 3px rgba(46, 230, 197, 0.45);
+  --scrollbar-thumb: rgba(126, 170, 164, 0.28);
+  --noise-opacity: 0.035;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg-0: #eef6f2;
+  --bg-1: #e6f1ec;
+  --bg-2: #dcebe4;
+  --bg-elevated: #ffffff;
+
+  --surface: rgba(255, 255, 255, 0.62);
+  --surface-strong: rgba(255, 255, 255, 0.97);
+  --surface-soft: rgba(8, 62, 52, 0.045);
+  --surface-hover: rgba(8, 62, 52, 0.075);
+  --card-bg: linear-gradient(
+    155deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(248, 253, 250, 0.82) 60%,
+    rgba(240, 249, 245, 0.9) 100%
+  );
+  --nav-bg: rgba(244, 251, 247, 0.8);
+  --input-bg: rgba(255, 255, 255, 0.72);
+
+  --text-1: #0b2421;
+  --text-2: #3e5f58;
+  --text-3: #4f6b65;
+
+  --line: rgba(9, 74, 64, 0.12);
+  --line-strong: rgba(9, 74, 64, 0.22);
+  --line-bright: rgba(9, 74, 64, 0.34);
+  --overlay: rgba(8, 28, 24, 0.4);
+
+  --teal: #078d78;
+  --teal-ink: #067a68;
+  --teal-deep: #056a5b;
+  --green: #2f8f4e;
+  --violet: #6d4bd1;
+  --pink: #b83a6b;
+  --sky: #066b93;
+  --amber: #8a5c06;
+  --danger: #c2384f;
+  --success: #0f7350;
+
+  --cat-molecular: #067a68;
+  --cat-microbiology: #4a7a14;
+  --cat-cell: #6d4bd1;
+  --cat-agri: #8a5c06;
+  --cat-industrial: #066b93;
+  --cat-bioinformatics: #b83a6b;
+
+  --diff-beginner: #0f7350;
+  --diff-intermediate: #8a5c06;
+  --diff-advanced: #c2384f;
+
+  --ambient-teal: rgba(7, 141, 120, 0.12);
+  --ambient-violet: rgba(109, 75, 209, 0.08);
+  --ambient-sky: rgba(8, 120, 168, 0.06);
+
+  --shadow-sm: 0 4px 16px rgba(17, 64, 55, 0.08);
+  --shadow-md: 0 16px 44px rgba(17, 64, 55, 0.1);
+  --shadow-lg: 0 30px 80px rgba(17, 64, 55, 0.16);
+  --shadow-glow: 0 0 0 1px rgba(7, 141, 120, 0.14), 0 20px 60px rgba(7, 141, 120, 0.08);
+  --glow-teal: 0 0 42px rgba(7, 141, 120, 0.1);
+  --glow-violet: 0 0 48px rgba(109, 75, 209, 0.1);
+
+  --focus: 0 0 0 3px rgba(7, 141, 120, 0.35);
+  --scrollbar-thumb: rgba(9, 74, 64, 0.22);
+  --noise-opacity: 0.022;
+}
+
+/* --------------------------------------------------------------------------
+   Reset
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-0);
+  color: var(--text-1);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body.modal-open,
+body.lab-open {
+  overflow: hidden;
+}
+
+img,
+svg,
+canvas,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+strong {
+  font-weight: 600;
+}
+
+::selection {
+  background: rgba(46, 230, 197, 0.28);
+  color: var(--text-1);
+}
+
+[data-theme="light"] ::selection {
+  background: rgba(7, 141, 120, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   Ambient page background
+   -------------------------------------------------------------------------- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -4;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 620px at 82% -8%, var(--ambient-teal), transparent 65%),
+    radial-gradient(760px 540px at 8% 18%, var(--ambient-violet), transparent 65%),
+    radial-gradient(720px 520px at 50% 112%, var(--ambient-sky), transparent 65%),
+    linear-gradient(180deg, var(--bg-1), var(--bg-0) 42%, var(--bg-0));
+}
+
+/* --------------------------------------------------------------------------
+   Typography helpers
+   -------------------------------------------------------------------------- */
+.mono {
+  font-family: var(--font-mono);
+  font-variant-ligatures: none;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--teal-ink);
+}
+
+.eyebrow--muted {
+  color: var(--text-3);
+}
+
+.eyebrow__dot {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 10px var(--teal);
+  animation: pulse-dot 2.4s var(--ease-in-out) infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(100deg, var(--teal) 0%, var(--green) 42%, var(--violet) 100%);
+  background-size: 180% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-pan 9s var(--ease-in-out) infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Layout helpers
+   -------------------------------------------------------------------------- */
+.container {
+  width: min(100% - (var(--gutter) * 2), var(--container));
+  margin-inline: auto;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1000;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--teal);
+  color: #03211b;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transform: translateY(-180%);
+  transition: transform var(--dur-2) var(--ease-out);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
+/* --------------------------------------------------------------------------
+   Scrollbars
+   -------------------------------------------------------------------------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: var(--radius-pill);
+  background: var(--scrollbar-thumb);
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--line-bright);
+  background-clip: content-box;
+}
+
+/* --------------------------------------------------------------------------
+   Icons
+   -------------------------------------------------------------------------- */
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+  flex: 0 0 auto;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Utility
+   -------------------------------------------------------------------------- */
+[hidden] {
+  display: none !important;
+}
+
+.noscript {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background: var(--bg-0);
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --nav-height: 66px;
+  }
+}

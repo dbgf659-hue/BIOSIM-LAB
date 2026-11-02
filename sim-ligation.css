@@ -1,0 +1,7 @@
+/* Ligation plasmid map. */
+.lig-art { display: grid; grid-template-columns: 180px 1fr; gap: 12px; align-items: center; border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); }
+.lig-map__svg { width: 100%; height: auto; }
+.lig-facts { display: grid; gap: 5px; }
+.lig-facts p { display: flex; justify-content: space-between; gap: 10px; margin: 0; font-size: 11px; padding-bottom: 4px; border-bottom: 1px dashed rgba(127, 167, 162, 0.2); }
+.lig-facts b { font-weight: 500; color: #7fa7a2; }
+.lig-facts span { color: #dff5f0; text-align: right; }

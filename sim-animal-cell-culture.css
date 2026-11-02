@@ -1,0 +1,10 @@
+/* Cell culture flask and hemocytometer grid. */
+.ac-cell-art { display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px; border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); align-items: center; }
+.ac-flask { position: relative; aspect-ratio: 4 / 3; border-radius: 8px 8px 18px 18px; border: 1px solid rgba(190, 240, 235, 0.4); background: rgba(140, 220, 210, 0.05); }
+.ac-flask.has-media { background: linear-gradient(180deg, rgba(252, 165, 165, 0.12), rgba(252, 165, 165, 0.22)); }
+.ac-flask b { position: absolute; width: 7px; height: 5px; border-radius: 50%; background: rgba(254, 226, 226, 0.8); transform: translate(-50%, -50%); }
+.ac-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: rgba(226, 232, 240, 0.15); padding: 3px; border-radius: 4px; }
+.ac-grid span { aspect-ratio: 1; border: 1px solid rgba(127, 167, 162, 0.4); display: grid; place-items: center; font-size: 8px; color: #dff5f0; }
+.ac-cell-art__facts { grid-column: 1 / -1; display: flex; gap: 14px; flex-wrap: wrap; }
+.ac-cell-art__facts p { margin: 0; font-size: 10px; color: #7fa7a2; }
+.ac-cell-art__facts span { color: #e2f6f2; margin-left: 4px; }

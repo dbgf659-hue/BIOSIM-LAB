@@ -1,0 +1,15 @@
+/* Restriction digest map, site list and fragment readout. */
+.re-art { display: grid; gap: 10px; border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); }
+.re-art__map { display: grid; gap: 4px; }
+.re-track { position: relative; height: 26px; border-radius: 6px; background: rgba(147, 197, 253, 0.18); overflow: hidden; }
+.re-frag { position: absolute; inset: 8px auto; height: 10px; border-right: 1px solid rgba(6, 24, 28, 0.8); background: rgba(147, 197, 253, 0.35); }
+.re-site { position: absolute; top: 0; bottom: 0; width: 2px; }
+.re-scale { display: flex; justify-content: space-between; font-size: 9px; color: #6f8f8b; }
+.re-art__sites { display: grid; gap: 4px; }
+.re-site-row { display: grid; grid-template-columns: 64px 1fr 54px; gap: 8px; align-items: center; font-size: 11px; }
+.re-site-row code { font-family: ui-monospace, monospace; font-size: 10px; color: #cbe9e3; letter-spacing: 0.06em; }
+.re-site-row u { color: #f87171; text-decoration: none; padding: 0 2px; }
+.re-site-row span { color: #7f8f8d; text-align: right; }
+.re-art__frags { display: flex; flex-wrap: wrap; gap: 6px; font-size: 10px; }
+.re-art__frags span { padding: 2px 8px; border-radius: 4px; background: rgba(46, 230, 197, 0.1); color: #a7f3d0; }
+.re-art__frags em { color: #fca5a5; font-style: normal; }

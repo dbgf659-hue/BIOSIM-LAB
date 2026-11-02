@@ -1,0 +1,7 @@
+/* Spectrophotometer cuvette and readout. */
+.sp2-art { display: grid; grid-template-columns: 100px 1fr; gap: 12px; border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); align-items: center; }
+.sp2-cuvette { position: relative; height: 120px; border: 1px solid rgba(190, 240, 235, 0.45); border-radius: 3px; background: rgba(140, 220, 210, 0.06); display: grid; align-items: end; overflow: hidden; }
+.sp2-cuvette i { display: block; width: 100%; background: linear-gradient(180deg, rgba(46, 230, 197, 0.5), rgba(20, 120, 100, 0.35)); }
+.sp2-cuvette b { position: absolute; width: 10px; height: 10px; border-radius: 50%; background: rgba(255, 255, 255, 0.6); top: 30%; left: 40%; }
+.sp2-cuvette em { position: absolute; inset: 0; background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.06) 0 3px, transparent 3px 6px); }
+.sp2-art__read p { margin: 0 0 4px; font-size: 11px; color: #9fc2bd; }

@@ -1,0 +1,19 @@
+/* Laminar flow hood and contamination plate. */
+.as-art { display: grid; grid-template-columns: 1.4fr 1fr; gap: 12px; border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); }
+.as-hood { border: 1px solid rgba(127, 167, 162, 0.3); border-radius: 10px; padding: 8px; display: grid; gap: 8px; background: rgba(140, 220, 210, 0.04); }
+.as-hood header { display: flex; justify-content: space-between; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: #7fa7a2; }
+.as-hood.is-on { border-color: #2ee6c5; }
+.as-hood__flow { display: flex; gap: 4px; height: 34px; align-items: flex-start; }
+.as-hood__flow i { flex: 1; height: 100%; background: linear-gradient(180deg, rgba(46, 230, 197, 0.35), transparent); opacity: 0.25; animation: as-flow 1.6s linear infinite; }
+.as-hood.is-on .as-hood__flow i { opacity: 0.8; }
+@keyframes as-flow { from { transform: translateY(-6px); } to { transform: translateY(6px); } }
+.as-plate { position: relative; aspect-ratio: 1; max-width: 170px; margin: 0 auto; border-radius: 50%; border: 2px solid rgba(190, 240, 235, 0.35); background: radial-gradient(circle, rgba(252, 211, 77, 0.22), rgba(180, 140, 60, 0.1)); }
+.as-plate.is-clean { border-color: #2ee6c5; }
+.as-plate b { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: #f87171; transform: translate(-50%, -50%); box-shadow: 0 0 4px #f87171; }
+.as-plate em { position: absolute; inset: 20% 30%; border-top: 2px dashed rgba(46, 230, 197, 0.5); border-radius: 50%; }
+.as-art__checks { display: grid; gap: 5px; align-content: start; }
+.as-art__checks span { font-size: 10px; padding: 3px 8px; border-radius: 4px; }
+.as-art__checks .is-ok { background: rgba(46, 230, 197, 0.1); color: #2ee6c5; }
+.as-art__checks .is-bad { background: rgba(248, 113, 113, 0.1); color: #fca5a5; }
+.as-art__checks p { margin: 4px 0 0; font-size: 11px; color: #9fc2bd; }
+.as-actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }

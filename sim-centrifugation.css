@@ -1,0 +1,14 @@
+/* Centrifuge rotor and pellet tube. */
+.cf-art { display: grid; grid-template-columns: 130px 90px 1fr; gap: 12px; border: 1px solid rgba(46, 230, 197, 0.18); border-radius: 12px; padding: 10px 12px; background: rgba(5, 20, 24, 0.8); align-items: center; }
+.cf-rotor { position: relative; width: 120px; height: 120px; border-radius: 50%; border: 2px solid rgba(127, 167, 162, 0.4); display: grid; place-items: center; }
+.cf-rotor.is-alarm { border-color: #f87171; animation: cf-shake 0.2s linear infinite; }
+@keyframes cf-shake { 50% { transform: translateX(2px); } }
+.cf-rotor span { position: absolute; }
+.cf-rotor i { display: block; width: 10px; height: 16px; border-radius: 2px; background: rgba(148, 163, 184, 0.4); }
+.cf-rotor i.is-loaded { background: #2ee6c5; }
+.cf-rotor b { font-size: 11px; color: #e2f6f2; }
+.cf-tube { position: relative; height: 110px; border: 1px solid rgba(190, 240, 235, 0.4); border-radius: 0 0 8px 8px; background: rgba(140, 220, 210, 0.08); display: grid; align-items: end; }
+.cf-tube i { display: block; height: 0; }
+.cf-tube.has-pellet i { height: 10px; background: #a7f3d0; border-radius: 0 0 6px 6px; }
+.cf-tube span { position: absolute; bottom: 14px; left: 0; right: 0; text-align: center; font-size: 8px; color: #dff5f0; }
+.cf-read { margin: 0; font-size: 10px; color: #8fb3ae; }
